@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indigo Wedding & Events Planners & Travel Experts LLC | Watertown, NY & Destination Celebrations</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="https://raw.githubusercontent.com/CreativeTugsDotCom/RE/refs/heads/main/uo_2075177_78ba2ca3-c1c1-4af8-9be6-e9f854e542ac.jpeg">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Premier wedding planning, event coordination, and destination travel expertise based in Watertown, New York. Guided by CEO Matthew Paul Cramer with structure, warmth, and inclusive care.">
+    <meta name="keywords" content="wedding planner Watertown NY, destination wedding planner, event planner New York, travel experts, LGBTQ weddings, military weddings, autism friendly travel, day of coordination">
+    <meta name="author" content="Indigo Wedding & Events Planners & Travel Experts LLC">
+    <link rel="canonical" href="https://indigoweddingeventplannerstravelexpertsllc.net">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Indigo Wedding & Events Planners & Travel Experts LLC">
+    <meta property="og:description" content="Your moment. Beautifully orchestrated. Full wedding planning, day-of coordination, and travel expertise in Watertown, NY and worldwide destinations.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- GSAP for Editorial Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        indigo: {
+                            950: '#0B0F1D',
+                            900: '#0E1326',
+                            800: '#151C38',
+                            700: '#1E284F',
+                            600: '#2A386C',
+                        },
+                        orchid: {
+                            500: '#9B62C9',
+                            600: '#7E52A0',
+                            700: '#6B3F8D',
+                        },
+                        lavender: {
+                            100: '#F4F0FD',
+                            200: '#E8E3F5',
+                            300: '#C4B5FD',
+                            400: '#A78BFA',
+                        },
+                        ivory: {
+                            50: '#FDFBF7',
+                            100: '#FAF6F0',
+                            200: '#F5EFE6',
+                            300: '#EAE1D2',
+                        },
+                        charcoal: {
+                            800: '#27272A',
+                            900: '#1A1A1E',
+                            950: '#111115',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+                    },
+                    letterSpacing: {
+                        widest: '.2em',
+                        superwide: '.3em'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Customizations & Refinements */
+        body {
+            background-color: #0E1326;
+            color: #FDFBF7;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .font-serif-editorial {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+        }
+
+        /* Subtle Luxury Grain Effect */
+        .bg-grain {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.02'/%3E%3C/svg%3E");
+        }
+
+        /* Custom Desktop Cursor (Disabled on Touch) */
+        @media (pointer: fine) {
+            .custom-cursor {
+                width: 12px;
+                height: 12px;
+                background-color: #C4B5FD;
+                border-radius: 50%;
+                position: fixed;
+                pointer-events: none;
+                z-index: 9999;
+                transform: translate(-50%, -50%);
+                transition: transform 0.1s ease, width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
+                mix-blend-mode: difference;
+            }
+            .custom-cursor-follower {
+                width: 36px;
+                height: 36px;
+                border: 1px solid rgba(196, 181, 253, 0.4);
+                border-radius: 50%;
+                position: fixed;
+                pointer-events: none;
+                z-index: 9998;
+                transform: translate(-50%, -50%);
+                transition: transform 0.18s ease-out;
+            }
+            body:hover .custom-cursor { opacity: 1; }
+            a:hover ~ .custom-cursor, button:hover ~ .custom-cursor, .hover-trigger:hover ~ .custom-cursor {
+                transform: translate(-50%, -50%) scale(2.5);
+                background-color: #7E52A0;
+            }
+        }
+
+        /* Glassmorphism & Subtle Borders */
+        .glass-panel {
+            background: rgba(21, 28, 56, 0.65);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(232, 227, 245, 0.08);
+        }
+
+        .glass-header {
+            background: rgba(14, 19, 38, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(232, 227, 245, 0.08);
+        }
+
+        /* Luxury Button Hover Transitions */
+        .btn-luxury {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .btn-luxury::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+            transition: left 0.6s ease;
+        }
+        .btn-luxury:hover::after {
+            left: 100%;
+        }
+
+        /* Smooth Hide Scrollbar for Editorial Sliders */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Focus States for Accessibility */
+        a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+            outline: 2px solid #C4B5FD;
+            outline-offset: 4px;
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EventPlanner",
+      "name": "Indigo Wedding & Events Planners & Travel Experts LLC",
+      "image": "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80",
+      "@id": "https://indigoweddingeventplannerstravelexpertsllc.net",
+      "url": "https://indigoweddingeventplannerstravelexpertsllc.net",
+      "telephone": "+16802910247",
+      "email": "matthewcramer@indigoweddingeventplannerstravelexpertsllc.net",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Watertown",
+        "addressRegion": "NY",
+        "addressCountry": "US"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Matthew Paul Cramer",
+        "jobTitle": "CEO & Lead Event Specialist"
+      },
+      "priceRange": "$$$",
+      "description": "Full wedding planning, day-of coordination, destination celebrations, elopements, and curated travel expertise.",
+      "knowsAbout": [
+        "Full Wedding Planning",
+        "Destination Weddings",
+        "Travel Planning",
+        "LGBTQ+ Weddings",
+        "Military Weddings",
+        "Autism-Friendly Wedding & Travel Planning"
+      ],
+      "sameAs": [
+        "https://www.facebook.com/weddingplanner32",
+        "https://www.instagram.com/indigo36978",
+        "https://twitter.com/MATTHEWCRA80330",
+        "https://www.linkedin.com/in/weddingplanner36"
+      ]
+    }
+    </script>
+</head>
+
+<body class="bg-indigo-900 text-ivory-50 antialiased selection:bg-orchid-600 selection:text-white bg-grain">
+
+    <!-- Custom Cursor Canvas Elements -->
+    <div class="custom-cursor hidden md:block" id="cursor"></div>
+    <div class="custom-cursor-follower hidden md:block" id="cursor-follower"></div>
+
+    <header id="main-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 py-6 px-6 lg:px-16">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            
+            <!-- Logo Mark & Identity -->
+            <a href="#" class="group flex items-center gap-3 focus:outline-none" aria-label="Indigo Wedding & Events Planners Home">
+                <div class="w-11 h-11 border border-lavender-300/30 rounded-full p-0.5 overflow-hidden flex items-center justify-center transition-all duration-300 group-hover:border-orchid-500 group-hover:shadow-[0_0_15px_rgba(155,98,201,0.4)] shrink-0 bg-indigo-950">
+                    <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/RE/refs/heads/main/uo_2075177_78ba2ca3-c1c1-4af8-9be6-e9f854e542ac.jpeg" alt="Indigo Wedding & Events Planners Logo" class="w-full h-full object-cover rounded-full">
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-serif-editorial text-xl md:text-2xl font-light tracking-widest text-ivory-50 uppercase group-hover:text-lavender-200 transition-colors">INDIGO</span>
+                    <span class="text-[9px] tracking-superwide text-lavender-300/80 uppercase font-medium -mt-1">Weddings • Events • Travel</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-xs tracking-widest uppercase font-medium text-ivory-100/90">
+                <a href="#weddings" class="hover:text-lavender-300 transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-orchid-500 hover:after:w-full after:transition-all">Weddings</a>
+                <a href="#events" class="hover:text-lavender-300 transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-orchid-500 hover:after:w-full after:transition-all">Events</a>
+                <a href="#destinations" class="hover:text-lavender-300 transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-orchid-500 hover:after:w-full after:transition-all">Destinations</a>
+                <a href="#travel" class="hover:text-lavender-300 transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-orchid-500 hover:after:w-full after:transition-all">Travel</a>
+                <a href="#about" class="hover:text-lavender-300 transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-orchid-500 hover:after:w-full after:transition-all">About</a>
+                <a href="#portfolio" class="hover:text-lavender-300 transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-orchid-500 hover:after:w-full after:transition-all">Portfolio</a>
+            </nav>
+
+            <!-- CTA & Mobile Toggle -->
+            <div class="flex items-center space-x-4">
+                <a href="#contact" class="hidden sm:inline-flex btn-luxury items-center gap-2 text-xs uppercase tracking-widest px-5 py-2.5 rounded-full border border-lavender-300/40 text-ivory-50 bg-indigo-800/40 hover:bg-orchid-600 hover:border-orchid-500 transition-all shadow-sm">
+                    <span>Plan With Us</span>
+                    <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </a>
+
+                <!-- Mobile Hamburger Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-ivory-50 p-2 rounded-lg border border-lavender-300/20 hover:bg-indigo-800/50 transition-colors" aria-label="Toggle navigation menu">
+                    <i data-lucide="menu" id="menu-icon-open" class="w-6 h-6"></i>
+                    <i data-lucide="x" id="menu-icon-close" class="w-6 h-6 hidden"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobile-menu" class="hidden md:hidden fixed inset-x-0 top-[81px] bg-indigo-950/95 backdrop-blur-2xl border-b border-lavender-300/10 px-8 py-8 flex flex-col space-y-6 shadow-2xl transition-all">
+            <a href="#weddings" class="mobile-nav-link text-lg font-serif-editorial tracking-wider text-ivory-100 hover:text-lavender-300">Weddings Planning</a>
+            <a href="#events" class="mobile-nav-link text-lg font-serif-editorial tracking-wider text-ivory-100 hover:text-lavender-300">Event Coordination</a>
+            <a href="#destinations" class="mobile-nav-link text-lg font-serif-editorial tracking-wider text-ivory-100 hover:text-lavender-300">Destination Celebrations</a>
+            <a href="#travel" class="mobile-nav-link text-lg font-serif-editorial tracking-wider text-ivory-100 hover:text-lavender-300">Travel Expertise</a>
+            <a href="#about" class="mobile-nav-link text-lg font-serif-editorial tracking-wider text-ivory-100 hover:text-lavender-300">About Matthew Cramer</a>
+            <a href="#portfolio" class="mobile-nav-link text-lg font-serif-editorial tracking-wider text-ivory-100 hover:text-lavender-300">Editorial Gallery</a>
+            <a href="#contact" class="btn-luxury w-full text-center text-xs uppercase tracking-widest px-6 py-3.5 rounded-full bg-orchid-600 text-white font-medium hover:bg-orchid-700 shadow-md">
+                Plan With Us
+            </a>
+        </div>
+    </header>
+
+    <section class="relative min-h-screen flex items-center justify-center pt-24 pb-16 px-6 lg:px-16 overflow-hidden">
+        <!-- Hero Background Image & Layering -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2000&q=85" alt="Cinematic luxury wedding reception table setting with soft candlelight" class="w-full h-full object-cover object-center opacity-35 scale-105 transform animate-pulse" style="animation-duration: 12s;">
+            <div class="absolute inset-0 bg-gradient-to-t from-indigo-950 via-indigo-950/70 to-indigo-950/40"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-indigo-950/80 via-transparent to-indigo-950/80"></div>
+        </div>
+
+        <!-- Hero Content Container -->
+        <div class="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center">
+            
+            <!-- Eyebrow -->
+            <div class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-lavender-300/20 bg-indigo-950/60 backdrop-blur-md mb-8">
+                <span class="w-1.5 h-1.5 rounded-full bg-orchid-500 animate-ping"></span>
+                <span class="text-[11px] uppercase tracking-superwide text-lavender-200 font-semibold">Weddings • Events • Destinations • Travel</span>
+            </div>
+
+            <!-- Main Headline -->
+            <h1 class="font-serif-editorial text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-light tracking-tight text-ivory-50 leading-[0.95] mb-8">
+                YOUR MOMENT.<br>
+                <span class="italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-ivory-100 via-lavender-200 to-orchid-500">BEAUTIFULLY ORCHESTRATED.</span>
+            </h1>
+
+            <!-- Subheading -->
+            <p class="max-w-2xl text-base sm:text-lg md:text-xl font-light text-ivory-200/90 leading-relaxed mb-10">
+                From intimate elopements to destination celebrations, Indigo Wedding & Events Planners & Travel Experts brings thoughtful planning, meaningful details, and confident coordination to every chapter of your celebration.
+            </p>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+                <a href="#contact" class="btn-luxury w-full sm:w-auto text-center px-8 py-4 rounded-full bg-orchid-600 text-white font-medium text-xs tracking-widest uppercase hover:bg-orchid-700 shadow-lg shadow-orchid-600/25 transition-all">
+                    Start Planning
+                </a>
+                <a href="#services" class="w-full sm:w-auto text-center px-8 py-4 rounded-full border border-lavender-300/30 text-ivory-100 hover:bg-lavender-300/10 font-medium text-xs tracking-widest uppercase transition-all backdrop-blur-sm">
+                    Explore Services
+                </a>
+            </div>
+
+            <!-- Scroll Indicator Cue -->
+            <div class="mt-20 flex flex-col items-center gap-2 opacity-70 hover:opacity-100 transition-opacity">
+                <span class="text-[10px] uppercase tracking-widest text-lavender-300/80">Scroll to explore</span>
+                <div class="w-5 h-8 border border-lavender-300/30 rounded-full flex items-start justify-center p-1">
+                    <div class="w-1 h-2 bg-orchid-500 rounded-full animate-bounce"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 lg:px-16 border-t border-lavender-300/10 relative bg-indigo-950">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            
+            <!-- Left Copy Column -->
+            <div class="lg:col-span-7 flex flex-col space-y-6">
+                <span class="text-xs uppercase tracking-superwide text-orchid-500 font-semibold">The Indigo Approach</span>
+                <h2 class="font-serif-editorial text-4xl sm:text-5xl lg:text-6xl font-light text-ivory-50 leading-tight">
+                    MORE THAN A PLAN.<br>
+                    <span class="italic font-normal text-lavender-200">A FEELING YOU CAN TRUST.</span>
+                </h2>
+                
+                <p class="text-lg text-ivory-200/90 font-light leading-relaxed">
+                    Indigo Wedding & Events Planners & Travel Experts LLC creates thoughtfully organized celebrations with a personal touch. Every detail, timeline, transition, and travel element is considered so couples can stay present for the moments that matter.
+                </p>
+
+                <p class="text-sm text-ivory-300/80 font-light leading-relaxed">
+                    Rooted in Watertown, New York, with capabilities reaching across international borders, our dual foundation as professional event planners and certified travel advisors simplifies what would otherwise be a complex multi-vendor endeavor into a singular, seamless experience.
+                </p>
+
+                <!-- Micro-Stat Bar -->
+                <div class="pt-8 border-t border-lavender-300/15 grid grid-cols-2 sm:grid-cols-4 gap-6">
+                    <div>
+                        <span class="block font-serif-editorial text-2xl text-lavender-200">WEDDINGS</span>
+                        <span class="text-[11px] uppercase tracking-wider text-lavender-300/60">Full & Partial</span>
+                    </div>
+                    <div>
+                        <span class="block font-serif-editorial text-2xl text-lavender-200">EVENTS</span>
+                        <span class="text-[11px] uppercase tracking-wider text-lavender-300/60">Private & Corporate</span>
+                    </div>
+                    <div>
+                        <span class="block font-serif-editorial text-2xl text-lavender-200">DESTINATIONS</span>
+                        <span class="text-[11px] uppercase tracking-wider text-lavender-300/60">Worldwide Scope</span>
+                    </div>
+                    <div>
+                        <span class="block font-serif-editorial text-2xl text-lavender-200">TRAVEL</span>
+                        <span class="text-[11px] uppercase tracking-wider text-lavender-300/60">Certified Care</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Imagery Column (Editorial Layout) -->
+            <div class="lg:col-span-5 relative">
+                <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl border border-lavender-300/20 group">
+                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=80" alt="Bride and groom sharing an intimate moment during a outdoor ceremony" class="w-full h-[520px] object-cover object-center group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-indigo-950/80 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 right-6 p-4 glass-panel rounded-xl">
+                        <p class="text-xs italic font-serif-editorial text-ivory-100">"Structured precision allows spontaneity and genuine emotion to shine."</p>
+                    </div>
+                </div>
+                <!-- Decorative Layer Behind Image -->
+                <div class="absolute -bottom-6 -right-6 w-full h-full border border-orchid-500/30 rounded-2xl -z-0 hidden sm:block"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="services" class="py-28 px-6 lg:px-16 bg-indigo-900 relative border-t border-lavender-300/10">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-20">
+                <div>
+                    <span class="text-xs uppercase tracking-superwide text-orchid-500 font-semibold">Comprehensive Offerings</span>
+                    <h2 class="font-serif-editorial text-4xl sm:text-6xl font-light text-ivory-50 mt-2">
+                        CURATED SERVICES FOR<br>
+                        <span class="italic font-normal text-lavender-200">EVERY CELEBRATION</span>
+                    </h2>
+                </div>
+                <p class="mt-4 md:mt-0 text-sm text-ivory-300/70 max-w-md font-light">
+                    Whether you require full-scale creative direction or targeted travel organization, our structured frameworks adapt to your precise needs.
+                </p>
+            </div>
+
+            <!-- Magazine Editorial Services List -->
+            <div class="space-y-12">
+                
+                <!-- Service 01 -->
+                <div id="weddings" class="group border-b border-lavender-300/15 pb-10 transition-all">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-1 text-3xl font-serif-editorial italic text-orchid-500 font-light">01</div>
+                        <div class="lg:col-span-4">
+                            <h3 class="font-serif-editorial text-3xl text-ivory-50 group-hover:text-lavender-200 transition-colors">FULL WEDDING PLANNING</h3>
+                            <span class="text-[11px] uppercase tracking-widest text-lavender-300/60 mt-1 block">End-to-End Orchestration</span>
+                        </div>
+                        <div class="lg:col-span-5 text-sm text-ivory-200/80 font-light leading-relaxed">
+                            For couples who want a trusted partner from the first idea to the final farewell. Indigo helps shape the vision, organize the moving parts, coordinate vendors, oversee budgets, and keep the experience beautifully aligned.
+                        </div>
+                        <div class="lg:col-span-2 flex lg:justify-end">
+                            <a href="#contact" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-lavender-300 group-hover:text-orchid-500 transition-colors">
+                                <span>Explore Service</span>
+                                <i data-lucide="arrow-up-right" class="w-4 h-4 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 02 -->
+                <div class="group border-b border-lavender-300/15 pb-10 transition-all">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-1 text-3xl font-serif-editorial italic text-orchid-500 font-light">02</div>
+                        <div class="lg:col-span-4">
+                            <h3 class="font-serif-editorial text-3xl text-ivory-50 group-hover:text-lavender-200 transition-colors">PARTIAL WEDDING PLANNING</h3>
+                            <span class="text-[11px] uppercase tracking-widest text-lavender-300/60 mt-1 block">Collaborative Support</span>
+                        </div>
+                        <div class="lg:col-span-5 text-sm text-ivory-200/80 font-light leading-relaxed">
+                            Ideal for couples who have established their key vision and selected initial vendors, but need expert guidance to assemble remaining design choices, streamline logistics, and refine execution strategy.
+                        </div>
+                        <div class="lg:col-span-2 flex lg:justify-end">
+                            <a href="#contact" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-lavender-300 group-hover:text-orchid-500 transition-colors">
+                                <span>Explore Service</span>
+                                <i data-lucide="arrow-up-right" class="w-4 h-4 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 03 -->
+                <div class="group border-b border-lavender-300/15 pb-10 transition-all">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-1 text-3xl font-serif-editorial italic text-orchid-500 font-light">03</div>
+                        <div class="lg:col-span-4">
+                            <h3 class="font-serif-editorial text-3xl text-ivory-50 group-hover:text-lavender-200 transition-colors">DAY-OF COORDINATION</h3>
+                            <span class="text-[11px] uppercase tracking-widest text-lavender-300/60 mt-1 block">Execution & Timeline Mastery</span>
+                        </div>
+                        <div class="lg:col-span-5 text-sm text-ivory-200/80 font-light leading-relaxed">
+                            For couples who have planned the celebration but want a professional presence managing the master timeline, transitions, vendor setup, and unexpected details when the day finally arrives.
+                        </div>
+                        <div class="lg:col-span-2 flex lg:justify-end">
+                            <a href="#contact" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-lavender-300 group-hover:text-orchid-500 transition-colors">
+                                <span>Explore Service</span>
+                                <i data-lucide="arrow-up-right" class="w-4 h-4 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 04 -->
+                <div id="destinations" class="group border-b border-lavender-300/15 pb-10 transition-all">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-1 text-3xl font-serif-editorial italic text-orchid-500 font-light">04</div>
+                        <div class="lg:col-span-4">
+                            <h3 class="font-serif-editorial text-3xl text-ivory-50 group-hover:text-lavender-200 transition-colors">DESTINATION WEDDINGS</h3>
+                            <span class="text-[11px] uppercase tracking-widest text-lavender-300/60 mt-1 block">Cross-Border Celebrations</span>
+                        </div>
+                        <div class="lg:col-span-5 text-sm text-ivory-200/80 font-light leading-relaxed">
+                            For celebrations where the location is part of your story. We blend high-level event planning and global travel logistics into one unified, stress-free experience for you and your guests.
+                        </div>
+                        <div class="lg:col-span-2 flex lg:justify-end">
+                            <a href="#contact" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-lavender-300 group-hover:text-orchid-500 transition-colors">
+                                <span>Explore Service</span>
+                                <i data-lucide="arrow-up-right" class="w-4 h-4 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 05 -->
+                <div class="group border-b border-lavender-300/15 pb-10 transition-all">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-1 text-3xl font-serif-editorial italic text-orchid-500 font-light">05</div>
+                        <div class="lg:col-span-4">
+                            <h3 class="font-serif-editorial text-3xl text-ivory-50 group-hover:text-lavender-200 transition-colors">ELOPEMENTS & CEREMONIES</h3>
+                            <span class="text-[11px] uppercase tracking-widest text-lavender-300/60 mt-1 block">Intimate & Meaningful</span>
+                        </div>
+                        <div class="lg:col-span-5 text-sm text-ivory-200/80 font-light leading-relaxed">
+                            Stripping away noise to focus purely on intimacy and devotion. Complete curation for vows, permit logistics, photography arrangements, and private celebratory dining.
+                        </div>
+                        <div class="lg:col-span-2 flex lg:justify-end">
+                            <a href="#contact" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-lavender-300 group-hover:text-orchid-500 transition-colors">
+                                <span>Explore Service</span>
+                                <i data-lucide="arrow-up-right" class="w-4 h-4 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 06 -->
+                <div id="travel" class="group border-b border-lavender-300/15 pb-10 transition-all">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-1 text-3xl font-serif-editorial italic text-orchid-500 font-light">06</div>
+                        <div class="lg:col-span-4">
+                            <h3 class="font-serif-editorial text-3xl text-ivory-50 group-hover:text-lavender-200 transition-colors">TRAVEL & DESTINATION SERVICES</h3>
+                            <span class="text-[11px] uppercase tracking-widest text-lavender-300/60 mt-1 block">Honeymoons, Group Travel & Insurance</span>
+                        </div>
+                        <div class="lg:col-span-5 text-sm text-ivory-200/80 font-light leading-relaxed">
+                            Travel planning connected to your event, not treated as an after-thought. Includes guest room blocks, custom honeymoon itineraries, resort bookings, and travel insurance safeguards.
+                        </div>
+                        <div class="lg:col-span-2 flex lg:justify-end">
+                            <a href="#contact" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-lavender-300 group-hover:text-orchid-500 transition-colors">
+                                <span>Explore Service</span>
+                                <i data-lucide="arrow-up-right" class="w-4 h-4 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 lg:px-16 bg-indigo-950 relative border-t border-lavender-300/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-xs uppercase tracking-superwide text-orchid-500 font-semibold">Intentional Hospitality</span>
+                    <h2 class="font-serif-editorial text-4xl sm:text-5xl lg:text-6xl font-light text-ivory-50 leading-tight">
+                        EVERY LOVE STORY<br>
+                        <span class="italic font-normal text-lavender-200">DESERVES A BEAUTIFUL PLAN.</span>
+                    </h2>
+                    
+                    <p class="text-base text-ivory-200/90 font-light leading-relaxed">
+                        At Indigo, inclusivity is not a checkbox or marketing line—it is embedded into how we design timelines, communicate with families, and curate safe, welcoming environments for all couples and guests.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+                        <div class="glass-panel p-6 rounded-xl border border-lavender-300/10">
+                            <div class="w-8 h-8 rounded-full bg-orchid-500/20 flex items-center justify-center text-lavender-300 mb-3">
+                                <i data-lucide="heart" class="w-4 h-4"></i>
+                            </div>
+                            <h4 class="font-serif-editorial text-xl text-ivory-50 mb-1">LGBTQ+ Celebrations</h4>
+                            <p class="text-xs text-ivory-300/70 font-light">Warm, affirming planning that respects your identities and honors your love story without assumptions.</p>
+                        </div>
+
+                        <div class="glass-panel p-6 rounded-xl border border-lavender-300/10">
+                            <div class="w-8 h-8 rounded-full bg-orchid-500/20 flex items-center justify-center text-lavender-300 mb-3">
+                                <i data-lucide="shield-check" class="w-4 h-4"></i>
+                            </div>
+                            <h4 class="font-serif-editorial text-xl text-ivory-50 mb-1">Military Weddings</h4>
+                            <p class="text-xs text-ivory-300/70 font-light">Precision scheduling and flexible coordination tailored around active-duty timelines and military protocol.</p>
+                        </div>
+
+                        <div class="glass-panel p-6 rounded-xl border border-lavender-300/10 sm:col-span-2">
+                            <div class="w-8 h-8 rounded-full bg-orchid-500/20 flex items-center justify-center text-lavender-300 mb-3">
+                                <i data-lucide="sparkles" class="w-4 h-4"></i>
+                            </div>
+                            <h4 class="font-serif-editorial text-xl text-ivory-50 mb-1">Autism-Friendly & Neurodivergent Travel/Planning</h4>
+                            <p class="text-xs text-ivory-300/70 font-light">Certified autism travel expertise providing sensory considerations, predictable schedules, calm quiet spaces, and thoughtful guest management.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+                    <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=800&q=80" alt="Inclusive happy couple celebrating their wedding moment" class="rounded-2xl object-cover h-80 w-full border border-lavender-300/10">
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=80" alt="Elegant outdoor reception table arrangement with natural florals" class="rounded-2xl object-cover h-80 w-full mt-8 border border-lavender-300/10">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-28 px-6 lg:px-16 bg-indigo-900 relative border-t border-lavender-300/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                
+                <!-- Founder Portrait Container -->
+                <div class="lg:col-span-5 order-2 lg:order-1">
+                    <div class="relative rounded-2xl overflow-hidden border border-lavender-300/20 shadow-2xl bg-indigo-950">
+                        <!-- High-End Editorial Portrait Visual Placeholder (Authentic styling note included) -->
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=900&q=80" alt="Matthew Paul Cramer, Founder and CEO of Indigo Wedding & Events Planners" class="w-full h-[580px] object-cover object-top grayscale hover:grayscale-0 transition-all duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-indigo-950 via-transparent to-transparent opacity-90"></div>
+                        
+                        <div class="absolute bottom-6 left-6 right-6 p-6 glass-panel rounded-xl">
+                            <span class="text-xs uppercase tracking-widest text-orchid-500 font-semibold block mb-1">Founder & CEO</span>
+                            <h3 class="font-serif-editorial text-2xl text-ivory-50">MATTHEW PAUL CRAMER</h3>
+                            <p class="text-[11px] text-lavender-300/80 uppercase tracking-wider mt-1">Certified Wedding Planner & Travel Specialist</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Founder Story Content -->
+                <div class="lg:col-span-7 order-1 lg:order-2 space-y-6">
+                    <span class="text-xs uppercase tracking-superwide text-orchid-500 font-semibold">Leadership & Personal Care</span>
+                    <h2 class="font-serif-editorial text-4xl sm:text-5xl lg:text-6xl font-light text-ivory-50 leading-tight">
+                        BEHIND EVERY CELEBRATION IS SOMEONE<br>
+                        <span class="italic font-normal text-lavender-200">PAYING ATTENTION.</span>
+                    </h2>
+
+                    <p class="text-base text-ivory-200/90 font-light leading-relaxed">
+                        Behind every beautifully executed celebration is someone paying attention to what could easily be missed. Matthew Cramer brings an organized, personal approach to wedding and event planning, combining structural discipline with travel expertise to help couples move from raw ideas to a celebration that feels unmistakably theirs.
+                    </p>
+
+                    <p class="text-sm text-ivory-300/80 font-light leading-relaxed">
+                        "My objective is never to impose a rigid template on your day, but rather to construct an invisible scaffolding. When logistics are managed with military-grade precision, you are freed to actually live inside the moment."
+                    </p>
+
+                    <!-- Credentials Highlights -->
+                    <div class="pt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-orchid-500/20 flex items-center justify-center text-lavender-300 shrink-0 mt-0.5">
+                                <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                            </div>
+                            <span class="text-xs text-ivory-200/90 font-light">Certified Wedding Planner Training</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-orchid-500/20 flex items-center justify-center text-lavender-300 shrink-0 mt-0.5">
+                                <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                            </div>
+                            <span class="text-xs text-ivory-200/90 font-light">Certified Autism Travel Professional</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-orchid-500/20 flex items-center justify-center text-lavender-300 shrink-0 mt-0.5">
+                                <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                            </div>
+                            <span class="text-xs text-ivory-200/90 font-light">Travefy Itinerary Specialist</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-orchid-500/20 flex items-center justify-center text-lavender-300 shrink-0 mt-0.5">
+                                <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                            </div>
+                            <span class="text-xs text-ivory-200/90 font-light">Watertown, NY Local Base</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-28 px-6 lg:px-16 bg-indigo-950 relative border-t border-lavender-300/10">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <span class="text-xs uppercase tracking-superwide text-orchid-500 font-semibold">Structure & Process</span>
+                <h2 class="font-serif-editorial text-4xl sm:text-6xl font-light text-ivory-50 mt-2">
+                    THE INDIGO METHOD
+                </h2>
+                <p class="text-sm text-ivory-300/80 font-light mt-4">
+                    A calm, methodical four-stage workflow designed to make planning enjoyable instead of overwhelming.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Step 01 -->
+                <div class="glass-panel p-8 rounded-2xl border border-lavender-300/10 hover:border-orchid-500/40 transition-all duration-300 group">
+                    <span class="text-4xl font-serif-editorial italic text-orchid-500 font-light block mb-6">01</span>
+                    <h3 class="font-serif-editorial text-2xl text-ivory-50 mb-3 group-hover:text-lavender-200 transition-colors">DISCOVER</h3>
+                    <p class="text-xs text-ivory-300/80 font-light leading-relaxed">
+                        We listen, understand the vision, the priorities, the personalities, budget framework, and the practical realities of your event.
+                    </p>
+                </div>
+
+                <!-- Step 02 -->
+                <div class="glass-panel p-8 rounded-2xl border border-lavender-300/10 hover:border-orchid-500/40 transition-all duration-300 group">
+                    <span class="text-4xl font-serif-editorial italic text-orchid-500 font-light block mb-6">02</span>
+                    <h3 class="font-serif-editorial text-2xl text-ivory-50 mb-3 group-hover:text-lavender-200 transition-colors">DESIGN</h3>
+                    <p class="text-xs text-ivory-300/80 font-light leading-relaxed">
+                        Ideas become a cohesive event concept, visual moodboard, spatial layout, vendor selection roadmap, and travel framework.
+                    </p>
+                </div>
+
+                <!-- Step 03 -->
+                <div class="glass-panel p-8 rounded-2xl border border-lavender-300/10 hover:border-orchid-500/40 transition-all duration-300 group">
+                    <span class="text-4xl font-serif-editorial italic text-orchid-500 font-light block mb-6">03</span>
+                    <h3 class="font-serif-editorial text-2xl text-ivory-50 mb-3 group-hover:text-lavender-200 transition-colors">COORDINATE</h3>
+                    <p class="text-xs text-ivory-300/80 font-light leading-relaxed">
+                        The logistics, timelines, communications, vendor contracts, guest accommodations, and travel details are brought together.
+                    </p>
+                </div>
+
+                <!-- Step 04 -->
+                <div class="glass-panel p-8 rounded-2xl border border-lavender-300/10 hover:border-orchid-500/40 transition-all duration-300 group">
+                    <span class="text-4xl font-serif-editorial italic text-orchid-500 font-light block mb-6">04</span>
+                    <h3 class="font-serif-editorial text-2xl text-ivory-50 mb-3 group-hover:text-lavender-200 transition-colors">CELEBRATE</h3>
+                    <p class="text-xs text-ivory-300/80 font-light leading-relaxed">
+                        You experience the day instead of managing it. We oversee every transition so you stay immersed in your moment.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section id="destinations-section" class="py-28 px-6 lg:px-16 bg-indigo-900 relative border-t border-lavender-300/10 overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
+                <div class="lg:col-span-8">
+                    <span class="text-xs uppercase tracking-superwide text-orchid-500 font-semibold">Global Capabilities</span>
+                    <h2 class="font-serif-editorial text-4xl sm:text-6xl font-light text-ivory-50 mt-2">
+                        DESTINATION WEDDINGS &<br>
+                        <span class="italic font-normal text-lavender-200">CELEBRATIONS WORLDWIDE</span>
+                    </h2>
+                </div>
+                <div class="lg:col-span-4 flex lg:justify-end">
+                    <a href="#contact" class="btn-luxury px-6 py-3 rounded-full border border-lavender-300/30 text-xs uppercase tracking-widest text-ivory-100 hover:bg-orchid-600 hover:border-orchid-500 transition-all">
+                        Plan a Destination Celebration
+                    </a>
+                </div>
+            </div>
+
+            <!-- Destination Photo Collage Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div class="relative rounded-2xl overflow-hidden h-80 group border border-lavender-300/10">
+                    <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/er/refs/heads/main/image.png" alt="Destination Wedding Celebration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-indigo-950/90 via-indigo-950/20 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 right-6">
+                        <span class="text-[10px] tracking-superwide uppercase text-orchid-400 font-semibold block">DESTINATION WEDDINGS</span>
+                        <h4 class="font-serif-editorial text-2xl text-ivory-50">Coastal & Tropical Celebrations</h4>
+                    </div>
+                </div>
+
+                <div class="relative rounded-2xl overflow-hidden h-80 group border border-lavender-300/10">
+                    <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/uu/refs/heads/main/530458276-777370188142001-6295734407214872618-n_51_2075177-175558297149106.jpeg" alt="Curated Travel & Destination Celebrations" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-indigo-950/90 via-indigo-950/20 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6">
+                        <span class="text-[10px] tracking-superwide uppercase text-orchid-400 font-semibold block">TRAVEL & DESTINATIONS</span>
+                        <h4 class="font-serif-editorial text-2xl text-ivory-50">Curated Travel Experiences</h4>
+                    </div>
+                </div>
+
+                <div class="relative rounded-2xl overflow-hidden h-80 group border border-lavender-300/10">
+                    <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=80" alt="European historic architecture wedding location" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-indigo-950/90 via-indigo-950/20 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6">
+                        <span class="text-[10px] tracking-superwide uppercase text-orchid-400 font-semibold block">EUROPE & HISTORIC</span>
+                        <h4 class="font-serif-editorial text-2xl text-ivory-50">Old World Elegance</h4>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-28 px-6 lg:px-16 bg-indigo-950 relative border-t border-lavender-300/10">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-xs uppercase tracking-superwide text-orchid-500 font-semibold">Visual Archives</span>
+                    <h2 class="font-serif-editorial text-4xl sm:text-6xl font-light text-ivory-50 mt-2">
+                        EDITORIAL GALLERY
+                    </h2>
+                </div>
+
+                <!-- Gallery Category Filter Tabs -->
+                <div class="flex flex-wrap gap-2 mt-6 md:mt-0" id="gallery-filters">
+                    <button data-filter="all" class="filter-btn text-xs uppercase tracking-widest px-4 py-2 rounded-full border border-orchid-500 bg-orchid-600 text-white transition-all">All</button>
+                    <button data-filter="weddings" class="filter-btn text-xs uppercase tracking-widest px-4 py-2 rounded-full border border-lavender-300/20 text-ivory-200 hover:border-lavender-300/50 transition-all">Weddings</button>
+                    <button data-filter="events" class="filter-btn text-xs uppercase tracking-widest px-4 py-2 rounded-full border border-lavender-300/20 text-ivory-200 hover:border-lavender-300/50 transition-all">Events</button>
+                    <button data-filter="destinations" class="filter-btn text-xs uppercase tracking-widest px-4 py-2 rounded-full border border-lavender-300/20 text-ivory-200 hover:border-lavender-300/50 transition-all">Destinations</button>
+                </div>
+            </div>
+
+            <!-- Masonry Portfolio Layout -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolio-grid">
+                
+                <div class="gallery-item weddings relative rounded-2xl overflow-hidden group border border-lavender-300/10 h-96">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Tablescape detail with candles" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-indigo-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-[10px] uppercase tracking-widest text-orchid-400">Weddings • Detail</span>
+                        <h4 class="font-serif-editorial text-xl text-ivory-50">Lakeside Reception Candlelight</h4>
+                    </div>
+                </div>
+
+                <div class="gallery-item destinations relative rounded-2xl overflow-hidden group border border-lavender-300/10 h-96 sm:mt-8">
+                    <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/er/refs/heads/main/image.png" alt="Destination wedding ceremony setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-indigo-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-[10px] uppercase tracking-widest text-orchid-400">Destinations • Ceremony</span>
+                        <h4 class="font-serif-editorial text-xl text-ivory-50">Destination Wedding Celebrations</h4>
+                    </div>
+                </div>
+
+                <div class="gallery-item events relative rounded-2xl overflow-hidden group border border-lavender-300/10 h-96">
+                    <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80" alt="Corporate celebratory gala setting" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-indigo-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-[10px] uppercase tracking-widest text-orchid-400">Events • Gala</span>
+                        <h4 class="font-serif-editorial text-xl text-ivory-50">Private Evening Reception</h4>
+                    </div>
+                </div>
+
+                <div class="gallery-item weddings relative rounded-2xl overflow-hidden group border border-lavender-300/10 h-96">
+                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80" alt="Couple embracing outdoors after ceremony" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-indigo-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-[10px] uppercase tracking-widest text-orchid-400">Weddings • Moments</span>
+                        <h4 class="font-serif-editorial text-xl text-ivory-50">Watertown Loft Celebration</h4>
+                    </div>
+                </div>
+
+                <div class="gallery-item destinations relative rounded-2xl overflow-hidden group border border-lavender-300/10 h-96 sm:mt-8">
+                    <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/uu/refs/heads/main/530458276-777370188142001-6295734407214872618-n_51_2075177-175558297149106.jpeg" alt="Curated Destination & Travel Planning" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-indigo-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-[10px] uppercase tracking-widest text-orchid-400">Destinations • Travel</span>
+                        <h4 class="font-serif-editorial text-xl text-ivory-50">Curated Travel Experiences</h4>
+                    </div>
+                </div>
+
+                <div class="gallery-item weddings relative rounded-2xl overflow-hidden group border border-lavender-300/10 h-96">
+                    <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=800&q=80" alt="Bride preparing for ceremony with bouquet" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-indigo-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-[10px] uppercase tracking-widest text-orchid-400">Weddings • Prep</span>
+                        <h4 class="font-serif-editorial text-xl text-ivory-50">Pre-Ceremony Quiet Hours</h4>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-16 px-6 lg:px-16 bg-indigo-900 border-t border-b border-lavender-300/10">
+        <div class="max-w-7xl mx-auto">
+            <p class="text-center text-[10px] uppercase tracking-superwide text-lavender-300/60 mb-8">VERIFIED INDUSTRY TRUST & ACCREDITATIONS</p>
+            
+            <div class="flex flex-wrap items-center justify-center gap-10 md:gap-16 opacity-80">
+                <div class="flex items-center gap-2 text-ivory-200 text-xs font-serif-editorial text-lg tracking-wider">
+                    <i data-lucide="award" class="w-5 h-5 text-orchid-400"></i>
+                    <span>WeddingWire Featured Planner</span>
+                </div>
+                <div class="flex items-center gap-2 text-ivory-200 text-xs font-serif-editorial text-lg tracking-wider">
+                    <i data-lucide="sparkles" class="w-5 h-5 text-orchid-400"></i>
+                    <span>Certified Autism Travel Professional</span>
+                </div>
+                <div class="flex items-center gap-2 text-ivory-200 text-xs font-serif-editorial text-lg tracking-wider">
+                    <i data-lucide="plane" class="w-5 h-5 text-orchid-400"></i>
+                    <span>Travefy Certified Specialist</span>
+                </div>
+                <div class="flex items-center gap-2 text-ivory-200 text-xs font-serif-editorial text-lg tracking-wider">
+                    <i data-lucide="heart" class="w-5 h-5 text-orchid-400"></i>
+                    <span>Inclusive Wedding Network</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 lg:px-16 bg-indigo-950 border-t border-lavender-300/10">
+        <div class="max-w-5xl mx-auto text-center">
+            <span class="text-xs uppercase tracking-superwide text-orchid-500 font-semibold">Investment Approach</span>
+            <h2 class="font-serif-editorial text-4xl sm:text-6xl font-light text-ivory-50 mt-2 mb-6">
+                PACKAGES CUSTOMIZED AROUND YOUR CELEBRATION
+            </h2>
+            <p class="text-sm text-ivory-300/80 max-w-2xl mx-auto font-light leading-relaxed mb-10">
+                Because no two love stories or travel itineraries share identical requirements, investment is tailored around your scope, guest count, location complexity, and required level of involvement.
+            </p>
+
+            <a href="#contact" class="btn-luxury inline-flex items-center gap-3 px-8 py-4 rounded-full bg-orchid-600 text-white font-medium text-xs tracking-widest uppercase hover:bg-orchid-700 transition-all shadow-lg shadow-orchid-600/20">
+                <span>View Custom Planning Options</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+        </div>
+    </section>
+
+    <section id="contact" class="py-28 px-6 lg:px-16 bg-indigo-900 relative border-t border-lavender-300/10">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+            
+            <!-- Contact Narrative Side -->
+            <div class="lg:col-span-5 space-y-6">
+                <span class="text-xs uppercase tracking-superwide text-orchid-500 font-semibold">Begin Your Journey</span>
+                <h2 class="font-serif-editorial text-4xl sm:text-6xl font-light text-ivory-50 leading-tight">
+                    LET'S MAKE THE PLAN FEEL AS BEAUTIFUL<br>
+                    <span class="italic font-normal text-lavender-200">AS THE DAY.</span>
+                </h2>
+                
+                <p class="text-sm text-ivory-300/80 font-light leading-relaxed">
+                    Tell us what you are planning, where you are dreaming of celebrating, and what you want the experience to feel like. Matthew and the Indigo team will review your details personally.
+                </p>
+
+                <!-- Direct Contact Details -->
+                <div class="pt-8 space-y-4 border-t border-lavender-300/15">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-orchid-500/20 flex items-center justify-center text-lavender-300">
+                            <i data-lucide="phone" class="w-4 h-4"></i>
+                        </div>
+                        <div>
+                            <span class="text-[10px] uppercase tracking-wider text-lavender-300/60 block">Direct Line</span>
+                            <a href="tel:6802910247" class="text-sm text-ivory-100 hover:text-lavender-300 transition-colors font-medium">680-291-0247</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-orchid-500/20 flex items-center justify-center text-lavender-300">
+                            <i data-lucide="mail" class="w-4 h-4"></i>
+                        </div>
+                        <div>
+                            <span class="text-[10px] uppercase tracking-wider text-lavender-300/60 block">Email Inquiry</span>
+                            <a href="mailto:matthewcramer@indigoweddingeventplannerstravelexpertsllc.net" class="text-xs text-ivory-100 hover:text-lavender-300 transition-colors break-all font-medium">matthewcramer@indigoweddingeventplannerstravelexpertsllc.net</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-orchid-500/20 flex items-center justify-center text-lavender-300">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i>
+                        </div>
+                        <div>
+                            <span class="text-[10px] uppercase tracking-wider text-lavender-300/60 block">Base Studio Location</span>
+                            <span class="text-sm text-ivory-100 font-medium">Watertown, New York (Worldwide Travel)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Form Card -->
+            <div class="lg:col-span-7">
+                <form id="consultation-form" class="glass-panel p-8 sm:p-10 rounded-2xl border border-lavender-300/15 space-y-6">
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label for="full-name" class="block text-xs uppercase tracking-wider text-lavender-200 mb-2">Your Name *</label>
+                            <input type="text" id="full-name" required placeholder="e.g. Eleanor & Julian" class="w-full bg-indigo-950/80 border border-lavender-300/20 rounded-xl px-4 py-3 text-sm text-ivory-50 placeholder-lavender-300/30 focus:border-orchid-500 focus:outline-none transition-colors">
+                        </div>
+                        <div>
+                            <label for="email-address" class="block text-xs uppercase tracking-wider text-lavender-200 mb-2">Email Address *</label>
+                            <input type="email" id="email-address" required placeholder="name@domain.com" class="w-full bg-indigo-950/80 border border-lavender-300/20 rounded-xl px-4 py-3 text-sm text-ivory-50 placeholder-lavender-300/30 focus:border-orchid-500 focus:outline-none transition-colors">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label for="phone-number" class="block text-xs uppercase tracking-wider text-lavender-200 mb-2">Phone Number</label>
+                            <input type="tel" id="phone-number" placeholder="(680) 000-0000" class="w-full bg-indigo-950/80 border border-lavender-300/20 rounded-xl px-4 py-3 text-sm text-ivory-50 placeholder-lavender-300/30 focus:border-orchid-500 focus:outline-none transition-colors">
+                        </div>
+                        <div>
+                            <label for="event-type" class="block text-xs uppercase tracking-wider text-lavender-200 mb-2">Event Type *</label>
+                            <select id="event-type" required class="w-full bg-indigo-950/80 border border-lavender-300/20 rounded-xl px-4 py-3 text-sm text-ivory-50 focus:border-orchid-500 focus:outline-none transition-colors">
+                                <option value="" disabled selected class="text-gray-500">Select event focus...</option>
+                                <option value="Full Wedding Planning" class="bg-indigo-950 text-white">Full Wedding Planning</option>
+                                <option value="Partial Wedding Planning" class="bg-indigo-950 text-white">Partial Wedding Planning</option>
+                                <option value="Day-Of Coordination" class="bg-indigo-950 text-white">Day-Of Coordination</option>
+                                <option value="Destination Wedding" class="bg-indigo-950 text-white">Destination Wedding</option>
+                                <option value="Elopement" class="bg-indigo-950 text-white">Elopement & Ceremony</option>
+                                <option value="Travel Expertise" class="bg-indigo-950 text-white">Honeymoon & Group Travel</option>
+                                <option value="Corporate / Private Event" class="bg-indigo-950 text-white">Corporate or Private Event</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label for="event-date" class="block text-xs uppercase tracking-wider text-lavender-200 mb-2">Preferred Date / Season</label>
+                            <input type="text" id="event-date" placeholder="e.g. Autumn 2027 or October 14" class="w-full bg-indigo-950/80 border border-lavender-300/20 rounded-xl px-4 py-3 text-sm text-ivory-50 placeholder-lavender-300/30 focus:border-orchid-500 focus:outline-none transition-colors">
+                        </div>
+                        <div>
+                            <label for="guest-count" class="block text-xs uppercase tracking-wider text-lavender-200 mb-2">Estimated Guest Count</label>
+                            <input type="text" id="guest-count" placeholder="e.g. Intimate (20) or 150+" class="w-full bg-indigo-950/80 border border-lavender-300/20 rounded-xl px-4 py-3 text-sm text-ivory-50 placeholder-lavender-300/30 focus:border-orchid-500 focus:outline-none transition-colors">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="vision-notes" class="block text-xs uppercase tracking-wider text-lavender-200 mb-2">Tell Us About Your Vision & Priorities</label>
+                        <textarea id="vision-notes" rows="4" placeholder="Share your location ideas, aesthetic preferences, special accessibility/travel requirements..." class="w-full bg-indigo-950/80 border border-lavender-300/20 rounded-xl px-4 py-3 text-sm text-ivory-50 placeholder-lavender-300/30 focus:border-orchid-500 focus:outline-none transition-colors resize-none"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-luxury w-full py-4 rounded-full bg-orchid-600 text-white font-medium text-xs tracking-widest uppercase hover:bg-orchid-700 transition-all shadow-md">
+                        Start The Conversation
+                    </button>
+
+                    <p class="text-[11px] text-center text-lavender-300/60">
+                        We'll review your details and get back to you within 24–48 business hours.
+                    </p>
+                </form>
+
+                <!-- Custom Form Submission Toast Notification -->
+                <div id="form-toast" class="hidden fixed bottom-6 right-6 z-50 glass-panel p-4 rounded-xl border border-orchid-500 text-sm text-ivory-50 flex items-center gap-3 shadow-2xl">
+                    <i data-lucide="check-circle" class="w-5 h-5 text-orchid-400"></i>
+                    <span>Thank you! Your message has been prepared for Matthew Cramer.</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-indigo-950 py-16 px-6 lg:px-16 border-t border-lavender-300/10 text-ivory-200">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 mb-12">
+            
+            <div class="md:col-span-5 space-y-4">
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 border border-lavender-300/30 rounded-full p-0.5 overflow-hidden flex items-center justify-center transition-all duration-300 group-hover:border-orchid-500 shrink-0 bg-indigo-950">
+                        <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/RE/refs/heads/main/uo_2075177_78ba2ca3-c1c1-4af8-9be6-e9f854e542ac.jpeg" alt="Indigo Logo" class="w-full h-full object-cover rounded-full">
+                    </div>
+                    <span class="font-serif-editorial text-xl font-light tracking-widest text-ivory-50 uppercase group-hover:text-lavender-200 transition-colors">INDIGO</span>
+                </a>
+                <p class="text-xs text-ivory-300/70 max-w-sm font-light leading-relaxed">
+                    INDIGO WEDDING & EVENTS PLANNERS & TRAVEL EXPERTS LLC<br>
+                    Watertown, New York. Turning meaningful ideas into beautifully organized, unforgettable celebrations worldwide.
+                </p>
+            </div>
+
+            <div class="md:col-span-3 space-y-2">
+                <span class="text-xs uppercase tracking-widest text-orchid-500 font-semibold block mb-2">Navigation</span>
+                <ul class="space-y-1.5 text-xs text-ivory-300/80 font-light">
+                    <li><a href="#weddings" class="hover:text-lavender-200 transition-colors">Weddings Planning</a></li>
+                    <li><a href="#events" class="hover:text-lavender-200 transition-colors">Event Coordination</a></li>
+                    <li><a href="#destinations" class="hover:text-lavender-200 transition-colors">Destination Weddings</a></li>
+                    <li><a href="#travel" class="hover:text-lavender-200 transition-colors">Travel Expertise</a></li>
+                    <li><a href="#about" class="hover:text-lavender-200 transition-colors">About Founder</a></li>
+                    <li><a href="#contact" class="hover:text-lavender-200 transition-colors">Consultation</a></li>
+                </ul>
+            </div>
+
+            <div class="md:col-span-4 space-y-3">
+                <span class="text-xs uppercase tracking-widest text-orchid-500 font-semibold block mb-2">Verified Social Presence</span>
+                <div class="flex items-center gap-4">
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/weddingplanner32" target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-full border border-lavender-300/30 bg-indigo-900/60 flex items-center justify-center text-ivory-100 hover:bg-orchid-600 hover:border-orchid-500 hover:text-white hover:scale-110 hover:-translate-y-1 hover:shadow-[0_4px_15px_rgba(155,98,201,0.4)] transition-all duration-300 group" aria-label="Facebook Profile" title="Facebook">
+                        <svg class="w-5 h-5 fill-current transition-transform duration-300 group-hover:scale-110" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/indigo36978" target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-full border border-lavender-300/30 bg-indigo-900/60 flex items-center justify-center text-ivory-100 hover:bg-orchid-600 hover:border-orchid-500 hover:text-white hover:scale-110 hover:-translate-y-1 hover:shadow-[0_4px_15px_rgba(155,98,201,0.4)] transition-all duration-300 group" aria-label="Instagram Profile" title="Instagram">
+                        <svg class="w-5 h-5 fill-current transition-transform duration-300 group-hover:scale-110" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <!-- X (Twitter) -->
+                    <a href="https://twitter.com/MATTHEWCRA80330" target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-full border border-lavender-300/30 bg-indigo-900/60 flex items-center justify-center text-ivory-100 hover:bg-orchid-600 hover:border-orchid-500 hover:text-white hover:scale-110 hover:-translate-y-1 hover:shadow-[0_4px_15px_rgba(155,98,201,0.4)] transition-all duration-300 group" aria-label="X Profile" title="X (Twitter)">
+                        <svg class="w-4 h-4 fill-current transition-transform duration-300 group-hover:scale-110" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/weddingplanner36" target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-full border border-lavender-300/30 bg-indigo-900/60 flex items-center justify-center text-ivory-100 hover:bg-orchid-600 hover:border-orchid-500 hover:text-white hover:scale-110 hover:-translate-y-1 hover:shadow-[0_4px_15px_rgba(155,98,201,0.4)] transition-all duration-300 group" aria-label="LinkedIn Profile" title="LinkedIn">
+                        <svg class="w-4 h-4 fill-current transition-transform duration-300 group-hover:scale-110" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.762-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="max-w-7xl mx-auto pt-8 border-t border-lavender-300/10 flex flex-col sm:flex-row items-center justify-between text-[11px] text-lavender-300/50">
+            <p>© <span id="current-year"></span> INDIGO WEDDING & EVENTS PLANNERS & TRAVEL EXPERTS LLC. All rights reserved.</p>
+            <div class="flex space-x-6 mt-4 sm:mt-0">
+                <a href="#" class="hover:text-lavender-200 transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-lavender-200 transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            lucide.createIcons();
+
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            const cursor = document.getElementById('cursor');
+            const follower = document.getElementById('cursor-follower');
+
+            if (cursor && follower && window.matchMedia('(pointer: fine)').matches) {
+                document.addEventListener('mousemove', (e) => {
+                    cursor.style.left = `${e.clientX}px`;
+                    cursor.style.top = `${e.clientY}px`;
+                    
+                    follower.style.left = `${e.clientX}px`;
+                    follower.style.top = `${e.clientY}px`;
+                });
+            }
+
+            const header = document.getElementById('main-header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('glass-header', 'py-4');
+                    header.classList.remove('py-6');
+                } else {
+                    header.classList.remove('glass-header', 'py-4');
+                    header.classList.add('py-6');
+                }
+            });
+
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const iconOpen = document.getElementById('menu-icon-open');
+            const iconClose = document.getElementById('menu-icon-close');
+            const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    const isHidden = mobileMenu.classList.contains('hidden');
+                    if (isHidden) {
+                        mobileMenu.classList.remove('hidden');
+                        iconOpen.classList.add('hidden');
+                        iconClose.classList.remove('hidden');
+                    } else {
+                        mobileMenu.classList.add('hidden');
+                        iconOpen.classList.remove('hidden');
+                        iconClose.classList.add('hidden');
+                    }
+                });
+
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        iconOpen.classList.remove('hidden');
+                        iconClose.classList.add('hidden');
+                    });
+                });
+            }
+
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Reset active states
+                    filterBtns.forEach(b => {
+                        b.classList.remove('border-orchid-500', 'bg-orchid-600', 'text-white');
+                        b.classList.add('border-lavender-300/20', 'text-ivory-200');
+                    });
+
+                    // Set clicked active
+                    btn.classList.add('border-orchid-500', 'bg-orchid-600', 'text-white');
+                    btn.classList.remove('border-lavender-300/20', 'text-ivory-200');
+
+                    const filter = btn.getAttribute('data-filter');
+
+                    galleryItems.forEach(item => {
+                        if (filter === 'all' || item.classList.contains(filter)) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            const form = document.getElementById('consultation-form');
+            const toast = document.getElementById('form-toast');
+
+            if (form) {
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    
+                    const name = document.getElementById('full-name').value;
+                    const email = document.getElementById('email-address').value;
+                    const eventType = document.getElementById('event-type').value;
+
+                    // Show Toast Notification safely
+                    if (toast) {
+                        toast.classList.remove('hidden');
+                        setTimeout(() => {
+                            toast.classList.add('hidden');
+                        }, 5000);
+                    }
+
+                    // Reset Form
+                    form.reset();
+                });
+            }
+
+            if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+                gsap.registerPlugin(ScrollTrigger);
+
+                gsap.utils.toArray('section').forEach(section => {
+                    gsap.from(section, {
+                        opacity: 0,
+                        y: 30,
+                        duration: 0.8,
+                        ease: 'power2.out',
+                        scrollTrigger: {
+                            trigger: section,
+                            start: 'top 85%',
+                            toggleActions: 'play none none none'
+                        }
+                    });
+                });
+            }
+
+        });
+    </script>
+</body>
+</html>
